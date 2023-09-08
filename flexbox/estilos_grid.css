@@ -1,0 +1,17 @@
+.grid-item {
+    display: grid;
+    width: 100px;
+    height: 100px;
+    margin: 10px;
+    border-radius: 15px;
+    text-align: center;/*no funciona, justify-content: center;*/
+    font-size: 25px;
+    background-image: url(../flexbox/Ladrillos_pequenos.png);
+    background-color: #ccc;
+    color:#e0f902;    
+}
+.container {
+    display: grid;
+    background-image: linear-gradient(to right, #2e9bfa 0%, #00f2fe 100%);  
+    align-content:start;  
+}
