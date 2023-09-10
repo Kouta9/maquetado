@@ -40,7 +40,13 @@ body {
     height: 75px;
 }
 .botones {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: space-around;
+    
+    justify-content: center   
+}
+
+.buscador {
+    width : 250px;
+    height: 20px;
+    margin-top: 25px;
+    border-radius: 10px;
 }

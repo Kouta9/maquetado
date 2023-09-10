@@ -1,0 +1,139 @@
+* {
+	padding: 0;
+	margin: 0;
+	box-sizing: border-box;
+	background-color: #000;
+}
+
+body {
+	font-family: 'Open Sans', sans-serif;
+}
+ 
+a {
+	text-decoration: none;
+	color: #ffffff;
+}
+
+.contenedor {
+	width: 100%;
+	min-height: 100vh;
+	margin: 0 auto;
+	display: grid;
+	grid-template-columns: minmax(90px, 90px) auto;
+	grid-template-rows: 60px auto;
+	grid-template-areas: "header header"
+						 "menu contenido";
+	transition: all .3s ease;
+}
+
+.contenedor.active {
+	grid-template-columns: minmax(300px, 18%) auto;
+}
+
+/*  HEADER */
+
+.header {
+	grid-area: header;
+	padding: 0 20px;
+	display: grid;
+	grid-template-columns: auto 1fr auto;
+	align-items: center;
+	justify-content: space-between;
+	grid-gap: 20px;
+	grid-template-areas: "logo busqueda iconos";
+}
+
+.header .contenedor-logo {
+	grid-area: logo;
+	display: flex;
+	align-items: center;
+}
+
+.ima_logo {
+	width: 50px;
+}
+
+.header .barra-busqueda {
+	grid-area: busqueda;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+}
+
+.header .barra-busqueda input {
+	min-width: 60%;
+	padding: 0 15px;
+	height: 35px;
+	line-height: 35px;
+	border: 1px solid #ccc;
+	font-size: 16px;
+}
+
+.header .botones-header .avatar {
+	width: 30px;
+	height: 30px;
+	display: inline-block;
+}
+
+.header .botones-header .avatar img {
+	vertical-align: top;
+	width: 100%;
+	border-radius: 100px;
+}
+
+/* ---- ---- ---- Menu Lateral ---- ---- ---- */
+
+.menu-lateral {
+	grid-area: menu;
+	background: #000000;
+	overflow: hidden;
+}
+
+.menu-lateral a {
+	display: block;
+	padding: 15px 35px;
+	color: #ffffff;
+	min-width: 800px;
+}
+
+.menu-lateral a:hover {
+	background: #000000;
+}
+
+.menu-lateral a.active {
+	background: #000000;
+	font-weight: bold;
+}
+
+/*separador*/
+.menu-lateral hr {
+	margin: 20px 0;
+	border: 1px solid #000000;
+}
+
+/* Contenido Principal */
+.main {
+	grid-area: contenido;
+	background: #000000;
+	padding: 40px;
+}
+
+.main .titulo {
+	margin-bottom: 20px;
+}
+
+.main .grid-videos {
+	display: grid;
+	grid-gap: 40px 20px;
+	grid-template-columns: repeat(4, 1fr);
+}
+
+.main .grid-videos .video {
+	width: 100%;
+	display: block;
+}
+
+.main .grid-videos .video img {
+	width: 100%;
+	border-radius: 10px;
+}
